@@ -1,0 +1,10 @@
+^C:\USERS\SQUZI\DESKTOP\НОВАЯ ПАПКА\RAKNET\BUILD\CMAKEFILES\9DC1CC15539D491966F70E1D9600BADF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/squzi/Desktop/Новая папка/RakNet" "-BC:/Users/squzi/Desktop/Новая папка/RakNet/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/squzi/Desktop/Новая папка/RakNet/build/RakNetProject.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

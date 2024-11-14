@@ -1,0 +1,10 @@
+^C:\USERS\SQUZI\DESKTOP\НОВАЯ ПАПКА\RAKNET\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/squzi/Desktop/Новая папка/RakNet" "-BC:/Users/squzi/Desktop/Новая папка/RakNet/build" --check-stamp-file "C:/Users/squzi/Desktop/Новая папка/RakNet/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
