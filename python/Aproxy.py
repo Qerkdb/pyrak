@@ -1,5 +1,5 @@
-from LuaRak.core import RakCore
-from LuaRak.utils import utils
+from core import RakCore
+from utils import utils
 
 
 class Proxy:

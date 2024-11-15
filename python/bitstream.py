@@ -1,5 +1,5 @@
 from core import BitStream as RakCoreBitStream
-import utils
+from utils import Utils
 
 class BitStream:
     def __init__(self, *args):
@@ -11,11 +11,7 @@ class BitStream:
     def reset(self):
         self.bitstream.Reset()
 
-    def resetReadPointer(self):
-        self.bitstream.ResetReadPointer()
-
-    def resetWritePointer(self):
-        self.bitstream.ResetWritePointer()
+    # def resetReads.ResetWritePointer()
 
     def setWriteOffset(self, offset):
         self.bitstream.SetWriteOffset(offset)
@@ -38,14 +34,14 @@ class BitStream:
     def getNumberOfUnreadBits(self):
         return self.bitstream.GetNumberOfUnreadBits()
 
-    def getNumberOfUnreadBytes(self):
-        return utils.convertBitsToBytes(self.getNumberOfUnreadBits())
+    # def getNumberOfUnreadBytes(self):
+    #     return Utils.convertBitsToBytes(self.getNumberOfUnreadBits())
 
     def ignoreBits(self, bits):
         self.bitstream.IgnoreBits(bits)
 
     def ignoreBytes(self, bytes):
-        self.bitstream.IgnoreBits(utils.convertBytesToBits(bytes))
+        self.bitstream.IgnoreBits(Utils.convertBytesToBits(bytes))
 
     def writeUInt8(self, value):
         self.bitstream.WriteUInt8(value)
@@ -84,5 +80,3 @@ class BitStream:
     def getBitStream(self):
         return self.bitstream
 
-    def getDataPtr(self):
-        return utils.getPointer(self.bitstream.GetData())

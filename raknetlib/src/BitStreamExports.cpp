@@ -1,14 +1,126 @@
 #include "BitStream.h"
 #include "RakClient.h"
 #include "NetworkTypes.h"
+#include "SOCKS5.hpp"
+#include "RakClient.h"
+#include "RakPeer.h"
+#include "Packetenumerations.h"
 #include <vector>
 #include <string>
+
+
+extern "C" __declspec(dllexport) int GetMTUSize()
+{
+    RakClient rakClient; // или используйте существующий объект RakClient
+    return rakClient.GetMTUSize(); // вызов метода GetMTUSize для объекта RakClient
+}
+
+
+extern "C" __declspec(dllexport) bool SetMTUSize(RakClient* client, int size) {
+    if (client == nullptr) return false; // Проверяем указатель на объект
+    return client->SetMTUSize(size);
+}
+
+extern "C" {
+
+    __declspec(dllexport) int GetNumberOfBytesUsed(RakNet::BitStream* bitStream) {
+        if (bitStream) {
+            return BITS_TO_BYTES(bitStream->GetNumberOfBitsUsed());
+        }
+        return 0;
+    }
+
+    __declspec(dllexport) int GetNumberOfUnreadBits(RakNet::BitStream* bitStream) {
+        if (bitStream) {
+            return bitStream->GetNumberOfBitsUsed() - bitStream->GetReadOffset();
+        }
+        return 0;
+    }
+
+    __declspec(dllexport) void IgnoreBits(RakNet::BitStream* bitStream, int numberOfBits) {
+        if (bitStream) {
+            bitStream->IgnoreBits(numberOfBits);
+        }
+    }
+
+    __declspec(dllexport) unsigned char* GetData(RakNet::BitStream* bitStream) {
+        if (bitStream) {
+            return bitStream->GetData();
+        }
+        return nullptr;
+    }
+
+    __declspec(dllexport) int CopyData(RakNet::BitStream* bitStream, unsigned char** _data) {
+        if (bitStream && _data) {
+            return bitStream->CopyData(_data);
+        }
+        return 0;
+    }
+
+    __declspec(dllexport) void SetData(RakNet::BitStream* bitStream, unsigned char* input) {
+        if (bitStream) {
+            bitStream->SetData(input);
+        }
+    }
+
+    __declspec(dllexport) void WriteBits(RakNet::BitStream* bitStream, const unsigned char* input, int numberOfBitsToWrite, bool rightAlignedBits) {
+        if (bitStream) {
+            bitStream->WriteBits(input, numberOfBitsToWrite, rightAlignedBits);
+        }
+    }
+
+    __declspec(dllexport) void WriteAlignedBytes(RakNet::BitStream* bitStream, const unsigned char* input, int numberOfBytesToWrite) {
+        if (bitStream) {
+            bitStream->WriteAlignedBytes(input, numberOfBytesToWrite);
+        }
+    }
+
+    __declspec(dllexport) bool ReadAlignedBytes(RakNet::BitStream* bitStream, unsigned char* output, int numberOfBytesToRead) {
+        if (bitStream) {
+            return bitStream->ReadAlignedBytes(output, numberOfBytesToRead);
+        }
+        return false;
+    }
+
+    __declspec(dllexport) bool ReadBits(RakNet::BitStream* bitStream, unsigned char* output, int numberOfBitsToRead, bool alignBitsToRight) {
+        if (bitStream) {
+            return bitStream->ReadBits(output, numberOfBitsToRead, alignBitsToRight);
+        }
+        return false;
+    }
+
+}
+
+extern "C" __declspec(dllexport) int GetReadOffset(RakNet::BitStream* bitStream) {
+    if (bitStream) {
+        return bitStream->GetReadOffset();  // Предполагаем, что `readOffset` доступен через метод `GetReadOffset()`
+    }
+    return 0;  // Или другой код ошибки
+}
+
+extern "C" __declspec(dllexport) int GetWriteOffset(RakNet::BitStream* bitStream) {
+    if (bitStream) {
+        return bitStream->GetNumberOfBitsUsed();  // Предполагаем, что `numberOfBitsUsed` доступен через метод `GetNumberOfBitsUsed()`
+    }
+    return 0;  // Или другой код ошибки
+}
+
+extern "C" __declspec(dllexport) void ResetReadPointer(RakNet::BitStream* bitStream) {
+    if (bitStream) {
+        bitStream->ResetReadPointer();
+    }
+}
+
+extern "C" __declspec(dllexport) void ResetWritePointer(RakNet::BitStream* bitStream) {
+    if (bitStream) {
+        bitStream->ResetWritePointer();
+    }
+}
 
 extern "C" __declspec(dllexport) void RakClient_SetTrackFrequencyTable(RakClient* client, bool b)
 {
     client->SetTrackFrequencyTable(b);
 }
-
 
 extern "C" __declspec(dllexport) bool NetworkID_IsPeerToPeerMode(void)
 {
@@ -96,8 +208,35 @@ extern "C" __declspec(dllexport) bool RakClient_SendData(RakClient* client, cons
 
 extern "C" __declspec(dllexport) Packet* RakClient_Receive(RakClient* client)
 {
-    return client->Receive();
+    printf("RakClient_Receive called\n");
+    
+    // Получаем пакет
+    Packet* packet = client->Receive();
+    
+    if (packet == nullptr) {
+        printf("No packet received (packet is nullptr)\n");
+        return nullptr;  // Возвращаем nullptr, если пакет не был получен
+    }
+
+    // Проверяем тип пакета
+    printf("Packet received. Type: %d\n", (int)(packet->data[0]));
+    
+    // Проверка на размер пакета
+    printf("Packet length: %d\n", packet->length);
+
+    // Разбор пакета, если он существует
+    if (packet->data[0] == ID_CONNECTION_REQUEST_ACCEPTED) {
+        printf("Received connection request accepted.\n");
+    }
+    else if (packet->data[0] == ID_REMOTE_NEW_INCOMING_CONNECTION) {
+        printf("Received new incoming connection.\n");
+    }
+
+    // Добавьте другие типы пакетов для вывода в логи по аналогии
+
+    return packet;
 }
+
 
 extern "C" __declspec(dllexport) void RakClient_DeallocatePacket(RakClient* client, Packet* packet)
 {
@@ -377,6 +516,7 @@ extern "C" {
         static_cast<RakNet::BitStream*>(ptr)->Write(value, len);
     }
 
+
     // Функции для чтения значений различных типов из BitStream напрямую
 
     __declspec(dllexport) unsigned char ReadUInt8(void* ptr) {
@@ -433,3 +573,4 @@ extern "C" {
         return buffer.data();
     }
 }
+

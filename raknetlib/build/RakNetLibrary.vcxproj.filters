@@ -1,124 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\BitStream.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\BitStream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\BitStreamExports.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\BitStreamExports.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\CheckSum.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\CheckSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\CommandParserInterface.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\CommandParserInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\ConsoleServer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\ConsoleServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\DS_ByteQueue.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\DS_ByteQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\DS_HuffmanEncodingTree.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\DS_HuffmanEncodingTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\DS_Table.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\DS_Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\DataBlockEncryptor.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\DataBlockEncryptor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\DataCompressor.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\DataCompressor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\GetTime.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\GetTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\InternalPacketPool.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\InternalPacketPool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\LinuxStrings.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\LinuxStrings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\LogCommandParser.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\LogCommandParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\NetworkIDGenerator.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\NetworkIDGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\NetworkTypes.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\NetworkTypes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\PluginInterface.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\PluginInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RPCMap.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RPCMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakClient.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakNetCommandParser.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakNetCommandParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakNetStatistics.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakNetStatistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakNetworkFactory.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakNetworkFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakPeer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakPeer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\RakSleep.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\RakSleep.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\Rand.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\Rand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\ReliabilityLayer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\ReliabilityLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SHA1.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SHA1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SimpleMutex.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SimpleMutex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SocketLayer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SocketLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\StringCompressor.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\StringCompressor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\StringTable.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\StringTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SystemAddressList.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SystemAddressList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SystemDatabaseClient.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SystemDatabaseClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\SystemDatabaseServer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\SystemDatabaseServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\TableSerializer.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\TableSerializer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\_findfirst.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\_findfirst.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\squzi\Desktop\Новая папка\RakNet\src\rijndael.cpp">
+    <ClCompile Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\src\rijndael.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\squzi\Desktop\Новая папка\RakNet\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\squzi\Documents\GitHub\pyrak\raknetlib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{09592FF6-5CE9-3F09-9E97-FD72C4C87B88}</UniqueIdentifier>
+      <UniqueIdentifier>{40E03734-D647-3076-B5C3-D97A9772165F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
